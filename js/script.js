@@ -29,33 +29,38 @@ const app = new Vue ({
             },
         ],
         newTask: '',
-  
     },
     methods: {
         taskComplete: function(i) {
+
             this.todoList.splice(i, 1);
+
         },
         taskGenerate: function() {
+
             const text = this.newTask;
             return {
                 text: text,
                 done: false,
             }
+
         },
         taskPush: function() {
+
             this.todoList.push(this.taskGenerate());
             this.newTask = '';
+
         },
         toggleDone: function(el) {
-            if ( el.done === false ) {
 
+            if ( el.done === false ) {
             el.done = true;
 
             } else {
             el.done = false;
+
             }
         },
     },
-
 })
 console.log(app);
