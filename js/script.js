@@ -53,13 +53,7 @@ const app = new Vue ({
         },
         toggleDone: function(el) {
 
-            if ( el.done === false ) {
-            el.done = true;
-
-            } else {
-            el.done = false;
-
-            }
+            el.done = !el.done;
         },
     },
 })
