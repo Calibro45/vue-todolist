@@ -34,7 +34,6 @@ const app = new Vue ({
         taskComplete: function(i) {
 
             this.todoList.splice(i, 1);
-
         },
         taskGenerate: function() {
 
@@ -43,13 +42,14 @@ const app = new Vue ({
                 text: text,
                 done: false,
             }
-
         },
         taskPush: function() {
 
-            this.todoList.push(this.taskGenerate());
-            this.newTask = '';
+            if (this.newTask != '') {
 
+                this.todoList.push(this.taskGenerate());
+                this.newTask = '';
+            }
         },
         toggleDone: function(el) {
 
