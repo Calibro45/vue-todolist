@@ -29,6 +29,11 @@ const app = new Vue ({
             },
         ]
     },
+    methods: {
+        taskComplete: function(i) {
+            this.todoList.splice(i, 1);
+        },
+    },
 
 })
 console.log(app);
