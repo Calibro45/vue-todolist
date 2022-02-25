@@ -31,7 +31,8 @@
                     
                     <div>
                         <ol>
-                            <li class="task" v-for="el in todoList">
+                            <li :class="['task', (el.done === true) ? 'complete' : '']" 
+                            v-for="el in todoList">
                                 {{ el.text }}
                                 <span class="icon"><i class="fas fa-times"></i></span>
                             </li>

@@ -85,6 +85,10 @@ input[type="button"]:hover {
     align-items: center;
 }
 
+.complete {
+    text-decoration: 2px line-through;
+}
+
 .icon {
     cursor: pointer;
     padding: 5px 2px;

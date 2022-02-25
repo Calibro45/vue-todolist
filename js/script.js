@@ -6,11 +6,11 @@ const app = new Vue ({
         todoList: [
             {
                 text: 'Fare la spesa',
-                done: false,
+                done: true,
             },
             {
                 text: 'Rifare la stanza',
-                done: false,
+                done: true,
             },
             {
                 text: 'Giocare alla play',
@@ -22,7 +22,7 @@ const app = new Vue ({
             },
             {
                 text: 'Studiare',
-                done: false,
+                done: true,
             },{
                 text: 'Rilassarsi sul divano',
                 done: false,
