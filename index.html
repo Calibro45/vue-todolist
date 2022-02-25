@@ -31,7 +31,8 @@
                     
                     <ol>
                         <li :class="['task', (el.done === true) ? 'complete' : '']" 
-                        v-for="(el, i) in todoList">
+                        v-for="(el, i) in todoList"
+                        @click="toggleDone(el)">
                             {{ el.text }}
                             <span class="icon" @click="taskComplete(i)">
                                 <i class="fas fa-times"></i>

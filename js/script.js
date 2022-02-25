@@ -45,7 +45,16 @@ const app = new Vue ({
         taskPush: function() {
             this.todoList.push(this.taskGenerate());
             this.newTask = '';
-        }
+        },
+        toggleDone: function(el) {
+            if ( el.done === false ) {
+
+            el.done = true;
+
+            } else {
+            el.done = false;
+            }
+        },
     },
 
 })

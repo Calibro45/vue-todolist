@@ -83,6 +83,11 @@ input[type="button"]:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
+}
+
+.task:hover {
+    cursor: pointer;
 }
 
 .complete {
