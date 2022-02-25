@@ -25,21 +25,19 @@
                     
                     <div class="new-task-wrapp">
                         <label for="today">Today :</label>
-                        <input type="text" name="todo">
-                        <input type="button" value="AddTask">
+                        <input type="text" name="todo" v-model="newTask">
+                        <input type="button" value="AddTask" @click="taskPush">
                     </div>
                     
-                    <div>
-                        <ol>
-                            <li :class="['task', (el.done === true) ? 'complete' : '']" 
-                            v-for="(el, i) in todoList">
-                                {{ el.text }}
-                                <span class="icon" @click="taskComplete(i)">
-                                    <i class="fas fa-times"></i>
-                                </span>
-                            </li>
-                        </ol>
-                    </div>
+                    <ol>
+                        <li :class="['task', (el.done === true) ? 'complete' : '']" 
+                        v-for="(el, i) in todoList">
+                            {{ el.text }}
+                            <span class="icon" @click="taskComplete(i)">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </li>
+                    </ol>
                     
                 </div>
 
@@ -48,18 +46,7 @@
 
         </div>
 
-
-
-
-
-
-
-
     </div>
-
-
-
-
 
     <script src="js/script.js"></script>
 </body>

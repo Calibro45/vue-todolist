@@ -27,12 +27,25 @@ const app = new Vue ({
                 text: 'Rilassarsi sul divano',
                 done: false,
             },
-        ]
+        ],
+        newTask: '',
+  
     },
     methods: {
         taskComplete: function(i) {
             this.todoList.splice(i, 1);
         },
+        taskGenerate: function() {
+            const text = this.newTask;
+            return {
+                text: text,
+                done: false,
+            }
+        },
+        taskPush: function() {
+            this.todoList.push(this.taskGenerate());
+            this.newTask = '';
+        }
     },
 
 })
