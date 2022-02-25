@@ -25,7 +25,7 @@ ol {
 .container {
     max-width: 50%;
     margin: 0 auto;
-    padding: 50px 10px;
+    padding: 80px 10px;
 }
 
 .todolist-wrapper {
@@ -58,21 +58,35 @@ ol {
 input[type="text"] {
     padding: 0 15px;
     line-height: 1.5rem;
-    border: 1px solid #2980b9;
+    border: 2px solid #2980b9;
     border-radius: 8px;
+    color: #2980b9;
+    font-weight: 700;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    background-color: rgba(41, 128, 185, 0.2);
+}
+
+label {
+    color: #2980b9;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 input[type="button"] {
     padding: 5px 15px;
     background-color: transparent;
     border-radius: 999px;
-    border: 1px solid #2980b9;
+    border: 2px solid #2980b9;
     font-weight: 700;
     color: #2980b9;
 }
 
 input[type="button"]:hover {
     cursor: pointer;
+    box-shadow: 2px 2px 5px #2980b9;
 }
 
 .task {
@@ -97,4 +111,13 @@ input[type="button"]:hover {
 .icon {
     cursor: pointer;
     padding: 5px 2px;
+}
+
+@media screen and (max-width: 860px) {
+
+    .new-task-wrapp {
+        display: flex;
+        flex-direction: column;
+    }
+    
 }

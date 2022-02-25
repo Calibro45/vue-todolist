@@ -24,8 +24,10 @@
                 <div class="todo-wrap">
                     
                     <div class="new-task-wrapp">
-                        <label for="today">Today :</label>
-                        <input type="text" name="todo" v-model="newTask" @keyup.enter="taskPush">
+                        <label for="today">Today ToDo :</label>
+                        <input type="text" name="todo"
+                        v-model="newTask" 
+                        @keyup.enter="taskPush">
                         <input type="button" value="AddTask" @click="taskPush">
                     </div>
                     
