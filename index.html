@@ -36,7 +36,7 @@
                         v-for="(el, i) in todoList"
                         @click="toggleDone(el)">
                             {{ el.text }}
-                            <span class="icon" @click="taskComplete(i)">
+                            <span class="icon" @click.stop="taskComplete(i)">
                                 <i class="fas fa-times"></i>
                             </span>
                         </li>
